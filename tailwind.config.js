@@ -14,7 +14,7 @@ module.exports = {
           600: '#00a0aa',
         },
         purple: {
-          500: '#9d4edd',
+          500: '#4edda4ff',
         },
         blue: {
           300: '#7dd3fc',
@@ -26,7 +26,7 @@ module.exports = {
       },
       boxShadow: {
         'neon-cyan': '0 0 10px #00f0ff, 0 0 20px #00f0ff40',
-        'neon-purple': '0 0 10px #9d4edd, 0 0 20px #9d4edd40',
+        'neon-purple': '0 0 10px #4edda4ff, 0 0 20px #9d4edd40',
       },
     },
   },
