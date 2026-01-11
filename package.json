@@ -1,10 +1,11 @@
 {
-  "name": "game-portfolio",
-  "version": "0.1.0",
+  "name": "antrow-jefin-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "description": "Full-Stack Developer & Game Developer Portfolio - J N Antrow Jefin",
+  "author": "J N Antrow Jefin <antrowjefin15@gmail.com>",
+  "homepage": "https://antrow-jefin.vercel.app",
   "dependencies": {
-    "@react-three/drei": "^10.5.1",
-    "@react-three/fiber": "^9.2.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -14,7 +15,6 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
-    "three": "^0.178.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
