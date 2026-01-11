@@ -4,33 +4,86 @@ import { LucideBriefcase, LucideCalendar, LucideMapPin } from 'lucide-react';
 const experiences = [
     {
         company: "Infosys Springboard",
-        role: "Project Lead – Full Stack Development Intern",
+        role: "Full Stack Development Intern (Project Lead)",
         duration: "Dec 2025 – Present",
-        location: "Remote",
-        type: "Internship",
+        location: "Virtual",
+        type: "Virtual Internship",
         highlights: [
-            "Architected and deployed JURIFY, a full-stack legal aid platform supporting 3 user roles with 98% uptime, handling 25+ concurrent users during UAT",
-            "Engineered a rule-based case-to-lawyer matching algorithm, reducing case routing time by 60% (15 → 6 minutes)",
-            "Built 12+ responsive React.js components with Tailwind CSS, achieving 35% faster page load times through code splitting and lazy loading",
-            "Implemented real-time communication with Google Calendar + Jitsi Meet integration, supporting 500+ daily messages",
-            "Integrated OpenStreetMap-based location services for proximity-aware lawyer discovery",
-            "Led sprint planning and 20+ peer code reviews for a 4-member team with 100% milestone completion"
+            "Participating in Infosys Springboard's online internship program focused on full-stack development",
+            "Leading a 4-member team as Project Lead for JURIFY, a legal aid platform project",
+            "Architected full-stack application with React.js frontend and Spring Boot backend",
+            "Implemented real-time communication with Google Calendar + Jitsi Meet integration",
+            "Conducting sprint planning and 20+ peer code reviews with 100% milestone completion"
         ],
-        tech: ["React", "Spring Boot", "Tailwind CSS", "Jitsi Meet", "Google Calendar API", "OpenStreetMap"]
+        tech: ["React", "Spring Boot", "Tailwind CSS", "Jitsi Meet", "Google Calendar API"]
+    },
+    {
+        company: "AICTE – EduSkills",
+        role: "Java Full Stack Developer Virtual Intern",
+        duration: "Jun 2025",
+        location: "Virtual",
+        type: "Virtual Internship",
+        highlights: [
+            "Completed 10-week virtual internship focused on Java Full Stack Development",
+            "Covered front-end, back-end, and deployment fundamentals",
+            "Emphasized practical, project-based learning with real-world use cases",
+            "Learned enterprise application development techniques"
+        ],
+        tech: ["Java", "Spring Boot", "HTML/CSS", "JavaScript", "MySQL"]
+    },
+    {
+        company: "AICTE – EduSkills (Google for Developers)",
+        role: "Android Developer Virtual Intern",
+        duration: "2025",
+        location: "Virtual",
+        type: "Virtual Internship",
+        highlights: [
+            "Completed 10-week virtual internship on Android App Development",
+            "Supported by the Google India Edu Program",
+            "Focused on core Android fundamentals, UI/UX, and Kotlin development",
+            "Built deployable mobile applications through project-based learning"
+        ],
+        tech: ["Android", "Kotlin", "Java", "XML", "Material Design"]
     },
     {
         company: "Deloitte USI",
         role: "Associate Analyst",
         duration: "Aug 2023 – Aug 2024",
-        location: "Hyderabad, Telangana",
+        location: "Hyderabad, India",
         type: "Full-time",
         highlights: [
-            "Completed 200+ hours of enterprise training in Java, Spring Boot, and Angular, scoring 92% on technical assessments",
-            "Resolved 200+ M365 post-migration support tickets within SLA, reducing repeat incidents by 30%",
-            "Monitored Workday application performance 24/7, maintaining 97% SLA compliance",
-            "Coordinated with 3 cross-functional teams, achieving 99% stakeholder satisfaction rating"
+            "Trained in Java, Spring Boot, and Angular for full-stack development",
+            "Cleared internal technical assessments",
+            "Worked on M365 migration, resolving post-migration issues",
+            "Managed Workday monitoring, analyzing errors, and creating tickets in ServiceNow"
         ],
         tech: ["Java", "Spring Boot", "Angular", "ServiceNow", "M365", "Workday"]
+    },
+    {
+        company: "Hoopoe Infoedge",
+        role: "Game Designer Intern",
+        duration: "Jan 2023 – Aug 2023",
+        location: "Chennai, India",
+        type: "Internship",
+        highlights: [
+            "Designed game mechanics, levels, and UI/UX for three published mobile games using Unity (C#)",
+            "Optimized game asset integration and performance",
+            "Contributed to production and Google Play Store deployment"
+        ],
+        tech: ["Unity", "C#", "Autodesk Maya", "Photoshop", "Google Play Console"]
+    },
+    {
+        company: "Ardens Business Solution Pvt. Ltd.",
+        role: "Frontend Developer Intern",
+        duration: "Dec 2022 – Jan 2023",
+        location: "Chennai, India",
+        type: "Internship",
+        highlights: [
+            "Assisted in testing and UI validation for the HRMS portal",
+            "Worked on form validation and functional correctness",
+            "Provided feedback for UI improvements"
+        ],
+        tech: ["HTML", "CSS", "JavaScript", "Bootstrap"]
     }
 ];
 
@@ -46,9 +99,9 @@ const ExperienceSection = React.forwardRef((props, ref) => {
                 <div className="max-w-5xl mx-auto space-y-8">
                     {experiences.map((exp, index) => (
                         <div
-                            key={exp.company}
+                            key={exp.company + exp.role}
                             className="bg-gray-800/50 rounded-xl p-6 md:p-8 border-2 border-cyan-500/20 hover:border-cyan-500/50 transition-all animate-slideInUp"
-                            style={{ animationDelay: `${index * 200}ms` }}
+                            style={{ animationDelay: `${index * 100}ms` }}
                         >
                             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                                 <div>
@@ -66,9 +119,11 @@ const ExperienceSection = React.forwardRef((props, ref) => {
                                         <LucideMapPin size={14} className="mr-2" />
                                         {exp.location}
                                     </div>
-                                    <span className={`inline-block mt-2 px-3 py-1 rounded-full text-xs font-bold ${exp.type === 'Internship'
-                                        ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
-                                        : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
+                                    <span className={`inline-block mt-2 px-3 py-1 rounded-full text-xs font-bold ${exp.type === 'Virtual Internship'
+                                            ? 'bg-green-500/20 text-green-300 border border-green-500/30'
+                                            : exp.type === 'Internship'
+                                                ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
+                                                : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
                                         }`}>
                                         {exp.type}
                                     </span>

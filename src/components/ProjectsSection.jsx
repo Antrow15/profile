@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { LucideExternalLink, LucideGithub, LucideGamepad2, LucideCode, LucideBrain } from 'lucide-react';
+import { LucideExternalLink, LucideGithub, LucideGamepad2, LucideCode, LucideBrain, LucideGlasses } from 'lucide-react';
 
 const projects = [
     // Full-Stack Projects
     {
         title: "JURIFY - Legal Aid Platform",
-        description: "A full-stack legal aid platform supporting 3 user roles with real-time communication, automated consultation booking via Google Calendar + Jitsi Meet, and proximity-aware lawyer discovery using OpenStreetMap.",
+        description: "A full-stack legal aid platform supporting 3 user roles with real-time communication, automated consultation booking via Google Calendar + Jitsi Meet, and proximity-aware lawyer discovery.",
         tech: ['React', 'Spring Boot', 'Tailwind CSS', 'Jitsi Meet', 'Google Calendar API'],
         category: 'fullstack',
         link: null,
@@ -32,8 +32,65 @@ const projects = [
         ]
     },
     {
+        title: "KR Scrap Exports",
+        description: "Freelance project for KR Scrap Exports company. Built and deployed a professional business website. Currently managing hosting and maintenance.",
+        tech: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+        category: 'fullstack',
+        link: "https://www.krscrapexports.com/",
+        github: null,
+        image: null,
+        highlights: [
+            "Live production website",
+            "Ongoing maintenance",
+            "Freelance delivery"
+        ]
+    },
+    {
+        title: "Dhaanish Ahmed College Website",
+        description: "WordPress-based website for Dhaanish Ahmed College of Engineering. Contributed to UI enhancements and server maintenance.",
+        tech: ['WordPress', 'Elementor', 'PHP'],
+        category: 'fullstack',
+        link: "https://dhaanishchennai.in/",
+        github: null,
+        image: null,
+        highlights: [
+            "Production college website",
+            "UI enhancements",
+            "Server maintenance"
+        ]
+    },
+    {
+        title: "Smart Cycle",
+        description: "Bicycle rental website with a virtual wallet system. Live cycle tracking and rental timer with integrated payment system.",
+        tech: ['PHP', 'HTML', 'Bootstrap', 'MySQL'],
+        category: 'fullstack',
+        link: null,
+        github: null,
+        image: null,
+        highlights: [
+            "Virtual wallet integration",
+            "Live cycle tracking",
+            "Rental timer system"
+        ]
+    },
+    {
+        title: "Personalized Nutrition Website",
+        description: "Freelance project for a food-tech startup. Nutrition-based web platform for personalized food recommendations with admin panel.",
+        tech: ['PHP', 'HTML', 'Bootstrap', 'MySQL'],
+        category: 'fullstack',
+        link: null,
+        github: null,
+        image: null,
+        highlights: [
+            "Personalized recommendations",
+            "Admin panel for user data",
+            "Freelance delivery"
+        ]
+    },
+    // AI/ML Projects
+    {
         title: "Fake News Detector",
-        description: "A multilingual web application to verify text and image authenticity using NLP, Tesseract OCR, Whisper transcription, and Gemini 2.5 Flash for real-time verification.",
+        description: "A multilingual web application to verify text and image authenticity using NLP, Tesseract OCR, Whisper transcription, and Gemini 2.5 Flash.",
         tech: ['React', 'Python', 'NLP', 'Tesseract OCR', 'Gemini API', 'LibreTranslate'],
         category: 'aiml',
         link: null,
@@ -45,10 +102,39 @@ const projects = [
             "Real-time verification pipeline"
         ]
     },
+    // AR/VR Projects
+    {
+        title: "AR Blueprint to 3D Model",
+        description: "Augmented Reality application for 3D architectural visualization. Renders 3D house models from 2D blueprints using Vuforia for real-time image recognition.",
+        tech: ['Unity', 'C#', 'Vuforia', 'Autodesk Maya'],
+        category: 'arvr',
+        link: null,
+        github: null,
+        image: null,
+        highlights: [
+            "Real-time image recognition",
+            "3D architectural visualization",
+            "2D to 3D conversion"
+        ]
+    },
+    {
+        title: "AR Machine Placement",
+        description: "Augmented Reality application for industrial machine visualization. Real-world machine placement with floor detection for precise positioning.",
+        tech: ['Unity', 'C#', 'AR Foundation', 'Autodesk Maya'],
+        category: 'arvr',
+        link: null,
+        github: null,
+        image: null,
+        highlights: [
+            "Floor detection algorithm",
+            "Industrial visualization",
+            "Precise placement system"
+        ]
+    },
     // Game Projects
     {
         title: "Space Twister",
-        description: "Jump across floating space platforms, collect crystals, and unlock epic skins in this fast-paced cosmic runner.",
+        description: "3D endless jumping game. Spaceship jumping with dynamic platforms, increasing difficulty and collectible rewards.",
         tech: ['Unity', 'C#', 'Autodesk Maya'],
         category: 'game',
         link: "https://play.google.com/store/apps/details?id=com.HoopoeInfoedge.SpaceTwister",
@@ -57,7 +143,7 @@ const projects = [
     },
     {
         title: "Galactic Gobbler",
-        description: "Guide planets into a black hole with precision lines while dodging dangerous Metroids in this cosmic puzzle challenge.",
+        description: "2D physics-based puzzle game. Line-drawing mechanics to guide planets into black holes with Unity Ads and skin customization.",
         tech: ['Unity', 'C#', 'Photoshop'],
         category: 'game',
         link: "https://play.google.com/store/apps/details?id=com.HoopoeInfoedge.GalacticGobbler",
@@ -66,8 +152,8 @@ const projects = [
     },
     {
         title: "Mars Runner",
-        description: "An exciting endless running game set on the red planet. Dodge obstacles and see how far you can run on the challenging terrain of Mars.",
-        tech: ['Unity', 'C#', 'Photoshop'],
+        description: "Endless 2D platformer game. Jump-based survival game with scoring system and high score tracking.",
+        tech: ['Android Studio', 'Java'],
         category: 'game',
         link: "https://play.google.com/store/apps/details?id=com.HoopoeInfoedge.MarsRunner",
         github: null,
@@ -79,6 +165,7 @@ const categories = [
     { id: 'all', label: 'All Projects', icon: LucideCode },
     { id: 'fullstack', label: 'Full-Stack', icon: LucideCode },
     { id: 'aiml', label: 'AI/ML', icon: LucideBrain },
+    { id: 'arvr', label: 'AR/VR', icon: LucideGlasses },
     { id: 'game', label: 'Games', icon: LucideGamepad2 }
 ];
 
@@ -93,6 +180,7 @@ const ProjectsSection = React.forwardRef((props, ref) => {
         switch (category) {
             case 'fullstack': return 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30';
             case 'aiml': return 'bg-purple-500/20 text-purple-300 border-purple-500/30';
+            case 'arvr': return 'bg-pink-500/20 text-pink-300 border-pink-500/30';
             case 'game': return 'bg-green-500/20 text-green-300 border-green-500/30';
             default: return 'bg-gray-500/20 text-gray-300 border-gray-500/30';
         }
@@ -102,6 +190,7 @@ const ProjectsSection = React.forwardRef((props, ref) => {
         switch (category) {
             case 'fullstack': return 'Full-Stack';
             case 'aiml': return 'AI/ML';
+            case 'arvr': return 'AR/VR';
             case 'game': return 'Game';
             default: return category;
         }
@@ -161,6 +250,8 @@ const ProjectsSection = React.forwardRef((props, ref) => {
                                     <div className="text-center">
                                         {project.category === 'aiml' ? (
                                             <LucideBrain size={48} className="mx-auto text-purple-400 mb-2" />
+                                        ) : project.category === 'arvr' ? (
+                                            <LucideGlasses size={48} className="mx-auto text-pink-400 mb-2" />
                                         ) : (
                                             <LucideCode size={48} className="mx-auto text-cyan-400 mb-2" />
                                         )}
@@ -171,13 +262,13 @@ const ProjectsSection = React.forwardRef((props, ref) => {
 
                             <div className="p-4 md:p-6">
                                 <div className="flex items-start justify-between mb-2">
-                                    <h3 className="text-xl md:text-2xl font-bold text-cyan-300">{project.title}</h3>
+                                    <h3 className="text-lg md:text-xl font-bold text-cyan-300">{project.title}</h3>
                                     <span className={`px-2 py-1 rounded text-xs font-bold border ${getCategoryColor(project.category)}`}>
                                         {getCategoryLabel(project.category)}
                                     </span>
                                 </div>
 
-                                <p className="text-blue-300 mb-4 text-sm md:text-base">{project.description}</p>
+                                <p className="text-blue-300 mb-4 text-sm">{project.description}</p>
 
                                 {project.highlights && (
                                     <ul className="mb-4 space-y-1">
@@ -206,7 +297,7 @@ const ProjectsSection = React.forwardRef((props, ref) => {
                                             className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-600 text-gray-900 font-bold rounded hover:bg-cyan-500 transition-colors transform hover:scale-105 text-sm"
                                         >
                                             <LucideExternalLink size={14} />
-                                            {project.category === 'game' ? 'Play Store' : 'View'}
+                                            {project.category === 'game' ? 'Play Store' : 'Visit'}
                                         </a>
                                     )}
                                     {project.github && (

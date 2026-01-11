@@ -6,18 +6,27 @@ const education = [
         institution: "SRM Institute of Science and Technology",
         campus: "KTR Campus",
         degree: "Master of Science in Computer Science",
-        duration: "June 2024 – Present",
+        duration: "2024 – Present",
         location: "Chennai, TamilNadu",
-        cgpa: "9.27",
+        cgpa: "9.14",
         status: "Pursuing"
     },
     {
         institution: "Loyola College",
         campus: "",
         degree: "Bachelor of Science in Computer Science",
-        duration: "June 2020 – May 2023",
+        duration: "2020 – 2023",
         location: "Chennai, TamilNadu",
         cgpa: "8.11",
+        status: "Completed"
+    },
+    {
+        institution: "MAAC - Maya Academy of Advanced Cinematics",
+        campus: "Anna Nagar",
+        degree: "ADIDG - Advanced Program in Interactive Design and Games",
+        duration: "2020 – 2023",
+        location: "Chennai, TamilNadu",
+        cgpa: null,
         status: "Completed"
     }
 ];
@@ -31,12 +40,12 @@ const EducationSection = React.forwardRef((props, ref) => {
                     EDUCATION
                 </h2>
 
-                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
                     {education.map((edu, index) => (
                         <div
                             key={edu.institution}
                             className="bg-gray-800/50 rounded-xl p-6 border-2 border-cyan-500/20 hover:border-cyan-500/50 transition-all hover:-translate-y-2 animate-slideInUp"
-                            style={{ animationDelay: `${index * 200}ms` }}
+                            style={{ animationDelay: `${index * 150}ms` }}
                         >
                             <div className="flex items-start justify-between mb-3">
                                 <div className="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/30">
@@ -56,7 +65,7 @@ const EducationSection = React.forwardRef((props, ref) => {
                             {edu.campus && (
                                 <p className="text-sm text-blue-400 mb-2">{edu.campus}</p>
                             )}
-                            <p className="text-blue-300 font-semibold mb-3">{edu.degree}</p>
+                            <p className="text-blue-300 font-semibold mb-3 text-sm">{edu.degree}</p>
 
                             <div className="space-y-2 text-sm">
                                 <div className="flex items-center text-cyan-400">
@@ -67,10 +76,12 @@ const EducationSection = React.forwardRef((props, ref) => {
                                     <LucideMapPin size={14} className="mr-2" />
                                     {edu.location}
                                 </div>
-                                <div className="flex items-center text-yellow-400">
-                                    <LucideAward size={14} className="mr-2" />
-                                    CGPA: <span className="font-bold ml-1">{edu.cgpa}</span>
-                                </div>
+                                {edu.cgpa && (
+                                    <div className="flex items-center text-yellow-400">
+                                        <LucideAward size={14} className="mr-2" />
+                                        CGPA: <span className="font-bold ml-1">{edu.cgpa}</span>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}

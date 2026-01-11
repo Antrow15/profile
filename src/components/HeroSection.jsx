@@ -7,6 +7,7 @@ const navItems = [
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
     { id: 'education', label: 'Education' },
+    { id: 'achievements', label: 'Achievements' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' }
 ];
@@ -37,7 +38,7 @@ const HeroSection = React.forwardRef(({ onNavigate }, ref) => {
 
                     <p className="text-lg md:text-xl lg:text-2xl text-blue-300 mb-8 md:mb-12 max-w-3xl mx-auto animate-fadeInUp delay-500">
                         Building scalable web applications with Spring Boot, React & Angular.
-                        Creating immersive games with Unity & Unreal Engine.
+                        Creating immersive games & AR/VR experiences with Unity & Unreal Engine.
                     </p>
                 </div>
 
@@ -61,7 +62,7 @@ const HeroSection = React.forwardRef(({ onNavigate }, ref) => {
 
                 {/* Navigation Menu */}
                 <nav className="text-center animate-fadeInUp delay-1000">
-                    <div className="inline-flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-8 bg-gray-800/50 px-3 md:px-6 py-2 md:py-3 rounded-full border border-cyan-400/30">
+                    <div className="inline-flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 bg-gray-800/50 px-3 md:px-6 py-2 md:py-3 rounded-full border border-cyan-400/30">
                         {navItems.map((item) => (
                             <button
                                 key={item.id}

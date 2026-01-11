@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutSection = React.forwardRef((props, ref) => {
     return (
-        <section ref={ref} className="py-12 md:py-20 bg-gray-800/20">
+        <section ref={ref} className="py-12 md:py-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 animate-slideInLeft">
@@ -11,31 +11,29 @@ const AboutSection = React.forwardRef((props, ref) => {
 
                     <div className="space-y-4 text-blue-300 text-base md:text-lg">
                         <p className="animate-slideInRight delay-200">
-                            I'm <span className="text-cyan-300 font-bold">Antrow Jefin</span>, a Full-Stack Developer based in Chennai, India.
-                            Currently pursuing my Master's in Computer Science at SRM Institute of Science and Technology
-                            while working as a Project Lead at Infosys Springboard.
+                            I'm <span className="text-cyan-300 font-bold">J N Antrow Jefin</span>, a Full-Stack Developer and Game Developer based in Chennai, India.
+                            Currently pursuing my Master's in Computer Science at SRM Institute of Science and Technology (CGPA: 9.14)
+                            while participating in the Infosys Springboard virtual internship as a Project Lead.
                         </p>
 
                         <p className="animate-slideInRight delay-400">
-                            With experience at <span className="text-cyan-300">Deloitte</span> and hands-on expertise in
-                            <span className="text-cyan-300"> Spring Boot</span>, <span className="text-cyan-300">React</span>,
-                            and <span className="text-cyan-300">Angular</span>, I specialize in building scalable web applications
-                            with clean architecture. I've led teams, designed efficient algorithms, and delivered systems
-                            handling thousands of daily users.
+                            With professional experience at <span className="text-cyan-300">Deloitte</span>, <span className="text-cyan-300">Hoopoe Infoedge</span>,
+                            and <span className="text-cyan-300">Ardens Business Solution</span>, I've worked across the full spectrum of software development —
+                            from enterprise applications with <span className="text-cyan-300">Spring Boot</span> and <span className="text-cyan-300">Angular</span>
+                            to mobile games with <span className="text-cyan-300">Unity</span> and <span className="text-cyan-300">Unreal Engine</span>.
                         </p>
 
                         <p className="animate-slideInRight delay-600">
-                            Beyond enterprise development, I'm passionate about <span className="text-purple-300">game development</span>.
-                            I've published multiple mobile games on the Play Store using Unity and Unreal Engine.
-                            My journey began when I modded my first game at 14, and I've been hooked on creating
-                            interactive experiences ever since.
+                            I hold an <span className="text-purple-300">Advanced Diploma in Interactive Design and Games (ADIDG)</span> from MAAC,
+                            which fuels my passion for creating immersive experiences. I've published 3 games on the Google Play Store and
+                            developed multiple AR/VR applications for architectural and industrial visualization.
                         </p>
 
                         <p className="animate-slideInRight delay-800">
-                            I'm also an avid adopter of <span className="text-cyan-300">AI-assisted development tools</span> like
-                            Claude, Cursor, and Antigravity, using them to boost productivity and explore cutting-edge solutions.
-                            When I'm not coding, you can find me analyzing game mechanics, exploring new frameworks,
-                            or contributing to open-source projects.
+                            Beyond tech, I'm an <span className="text-yellow-300">International Taekwondo Medalist</span> and have represented my college
+                            as the <span className="text-cyan-300">Gaming eSports Ambassador</span>. I also manage freelance web projects like
+                            <span className="text-cyan-300"> KR Scrap Exports</span> and contribute to college websites. When I'm not coding,
+                            you can find me analyzing game mechanics, competing in eSports, or exploring new frameworks.
                         </p>
                     </div>
 
@@ -44,8 +42,8 @@ const AboutSection = React.forwardRef((props, ref) => {
                         {[
                             { label: 'Years of Experience', value: '2+' },
                             { label: 'Published Games', value: '3' },
-                            { label: 'Projects Completed', value: '10+' },
-                            { label: 'Current CGPA', value: '9.27' }
+                            { label: 'Projects Completed', value: '12+' },
+                            { label: 'Current CGPA', value: '9.14' }
                         ].map((fact, index) => (
                             <div
                                 key={fact.label}

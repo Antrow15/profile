@@ -7,8 +7,9 @@ const skillCategories = [
         skills: [
             { name: 'Java', level: 90 },
             { name: 'JavaScript', level: 85 },
-            { name: 'Python', level: 80 },
-            { name: 'C/C++', level: 75 },
+            { name: 'C/C++', level: 80 },
+            { name: 'Python', level: 75 },
+            { name: 'PHP', level: 75 },
             { name: 'SQL', level: 85 },
             { name: 'HTML/CSS', level: 90 }
         ]
@@ -20,46 +21,49 @@ const skillCategories = [
             { name: 'Spring Boot', level: 90 },
             { name: 'Angular', level: 85 },
             { name: 'React', level: 85 },
-            { name: 'Bootstrap', level: 80 }
+            { name: 'Bootstrap', level: 85 },
+            { name: 'WordPress', level: 70 }
         ]
     },
     {
-        name: 'Game Engines',
+        name: 'Game & 3D',
         icon: '🎮',
         skills: [
-            { name: 'Unity', level: 80 },
+            { name: 'Unity', level: 85 },
             { name: 'Unreal Engine', level: 75 },
+            { name: 'Autodesk Maya', level: 80 },
+            { name: '3ds Max', level: 70 },
             { name: 'C# (Unity)', level: 85 }
         ]
     },
     {
-        name: 'Tools & DevOps',
+        name: 'AR/VR',
+        icon: '🥽',
+        skills: [
+            { name: 'Vuforia', level: 80 },
+            { name: 'AR Foundation', level: 75 },
+            { name: 'AR Development', level: 80 }
+        ]
+    },
+    {
+        name: 'Tools & Design',
         icon: '🛠️',
         skills: [
             { name: 'Git/GitHub', level: 90 },
             { name: 'VS Code', level: 95 },
             { name: 'Postman', level: 85 },
-            { name: 'Maya', level: 70 },
-            { name: 'Photoshop', level: 70 }
+            { name: 'Photoshop', level: 75 },
+            { name: 'MS Office', level: 85 }
         ]
     },
     {
-        name: 'Deployment & Cloud',
+        name: 'Deployment',
         icon: '☁️',
         skills: [
             { name: 'Vercel', level: 85 },
             { name: 'Render', level: 80 },
-            { name: 'Cloudflare', level: 75 }
-        ]
-    },
-    {
-        name: 'AI Tools',
-        icon: '🤖',
-        skills: [
-            { name: 'Cursor', level: 90 },
-            { name: 'Claude', level: 90 },
-            { name: 'ChatGPT', level: 85 },
-            { name: 'Antigravity', level: 90 }
+            { name: 'Cloudflare', level: 75 },
+            { name: 'Google Play', level: 80 }
         ]
     }
 ];
@@ -107,11 +111,24 @@ const SkillsSection = React.forwardRef((props, ref) => {
                     ))}
                 </div>
 
-                {/* Quick Skills Tags */}
+                {/* Additional Skills & Interests */}
                 <div className="mt-10 text-center">
-                    <h3 className="text-lg font-bold text-cyan-300 mb-4">Also familiar with:</h3>
+                    <h3 className="text-lg font-bold text-cyan-300 mb-4">Areas of Interest</h3>
+                    <div className="flex flex-wrap justify-center gap-2 mb-6">
+                        {['Web Development', 'Game Development', 'AR/VR', 'Software Engineering', 'AI Tools'].map((interest, index) => (
+                            <span
+                                key={interest}
+                                className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full border border-purple-500/30 text-sm font-semibold animate-fadeInUp"
+                                style={{ animationDelay: `${index * 50}ms` }}
+                            >
+                                {interest}
+                            </span>
+                        ))}
+                    </div>
+
+                    <h3 className="text-lg font-bold text-cyan-300 mb-4">Soft Skills</h3>
                     <div className="flex flex-wrap justify-center gap-2">
-                        {['REST APIs', 'JWT', 'MySQL', 'ServiceNow', 'Jitsi Meet', 'Google Calendar API', 'OpenStreetMap', 'Tesseract OCR', 'NLP', 'Shader Programming', 'UI/UX Design'].map((skill, index) => (
+                        {['Problem Solving', 'Self-Learning', 'Presentation', 'Adaptability', 'Team Collaboration'].map((skill, index) => (
                             <span
                                 key={skill}
                                 className="px-3 py-1 bg-gray-800/50 text-cyan-300 rounded-full border border-cyan-500/20 text-sm animate-fadeInUp"

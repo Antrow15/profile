@@ -9,6 +9,7 @@ import {
   EducationSection,
   ProjectsSection,
   SkillsSection,
+  AchievementsSection,
   ShowreelSection,
   AboutSection,
   ContactSection,
@@ -65,6 +66,7 @@ const App = () => {
         <ProjectsSection ref={(el) => sectionsRef.current.projects = el} />
         <SkillsSection ref={(el) => sectionsRef.current.skills = el} />
         <EducationSection ref={(el) => sectionsRef.current.education = el} />
+        <AchievementsSection ref={(el) => sectionsRef.current.achievements = el} />
         <ShowreelSection ref={(el) => sectionsRef.current.showreel = el} />
         <AboutSection ref={(el) => sectionsRef.current.about = el} />
         <ContactSection ref={(el) => sectionsRef.current.contact = el} />
